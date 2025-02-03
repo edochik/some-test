@@ -1,0 +1,9 @@
+@use '../../style/mixin.scss' as mix;
+
+.loader {
+	@include mix.loader();
+}
+
+.List {
+	@include mix.list-reset();
+}

@@ -1,0 +1,23 @@
+@import 'normalize.css';
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	max-width: 1130px;
+	padding: 0 15px;
+	margin: auto;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
