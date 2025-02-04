@@ -1,0 +1,24 @@
+@use '../../style/mixin.scss' as mix;
+.SeminarDetails {
+	display: flex;
+	flex-direction: column;
+	.list {
+		@include mix.list-reset();
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		list-style: auto;
+		.item {
+		}
+	}
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		column-gap: 20px;
+		margin-bottom: 20px;
+	}
+	.button {
+		margin: auto;
+	}
+}

@@ -1,0 +1,62 @@
+@use '../../style/mixin.scss' as mix;
+.overlay {
+	opacity: 1;
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.modal {
+		position: relative;
+		background-color: white;
+		padding: 50px;
+		position: relative;
+		border-radius: 24px;
+		display: flex;
+		overflow: hidden;
+		.list {
+			@include mix.list-reset();
+			list-style: auto;
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+			.item {
+				> p {
+					margin: 0;
+				}
+			}
+		}
+		.close {
+			position: absolute;
+			cursor: pointer;
+			right: 24px;
+			top: 24px;
+			width: 20px;
+			height: 20px;
+			background-color: inherit;
+			border: none;
+			&:before,
+			&:after {
+				position: absolute;
+				content: '';
+				top: 50%;
+				left: 50%;
+				background-color: lightgray;
+				height: 2px;
+				width: 100%;
+			}
+			&:before {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			&:after {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+		}
+	}
+}
+
+.loader {
+	@include mix.loader();
+}

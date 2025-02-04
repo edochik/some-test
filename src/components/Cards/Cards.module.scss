@@ -1,0 +1,13 @@
+@use '../../style/mixin.scss' as mix;
+
+.Cards {
+	@include mix.list-reset();
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: space-between;
+}
+
+.loader {
+	@include mix.loader();
+}
